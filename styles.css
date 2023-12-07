@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    margin-right: 45px;
+}
+
+section {
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos del formulario */
+}
+
+label {
+    display: none;
+}
+
+input {
+    padding: 5px; /* Ajuste del padding */
+    flex: 1;
+    margin-right: 5px; /* Ajuste del margen derecho */
+}
+
+button {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 8px; /* Ajuste del padding */
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+section a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+section a:hover {
+    color: #555;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+#seccion-articulos {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; Eliminado para que los cuadros estén uno al lado del otro */
+}
+
+#seccion-articulos h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+article {
+    flex: 1 0 calc(25% - 20px); /* Ocupa el 25% del ancho total y deja un margen de 20px */
+    margin: 10px;
+    border: 1px solid #ddd; /* Borde para resaltar el cuadro */
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 400px; /* Tamaño máximo de 100px */
+    
+ 
+}
+#seccion-articulos article img {
+    max-width: 100%; /* Establecer el ancho máximo de la imagen al 100% del contenedor */
+    height: auto;    /* Mantener la proporción original de la imagen */
+    display: block;  /* Asegurar que la imagen no afecte a otros elementos en línea */
+}
