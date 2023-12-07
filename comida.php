@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Comida - Tu Blog de Estilo de Vida</title>
-    <!-- Agrega aquí tus enlaces a hojas de estilo (CSS) si es necesario -->
+    
 </head>
 
 <body>
 
-    <!-- Banner con Logo -->
+    
     <header>
         <div>
            <a href="index.php"> <img src="images/logo.png" alt="Logo de tu blog" style="height: 40px; width: auto; float: left; border-radius: 50px;"></a>
@@ -64,7 +64,7 @@
         ?>
     </section>
 
-    <!-- Pie de Página (opcional) -->
+ 
     <footer>
         © 2023 Tu Blog de Estilo de Vida. Todos los derechos reservados.
     </footer>

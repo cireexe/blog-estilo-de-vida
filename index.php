@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <title>Tu Blog de Estilo de Vida</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Agrega aquí tus enlaces a hojas de estilo (CSS) si es necesario -->
+    
 </head>
 
 <body>
 
-    <!-- Banner con Logo -->
+    
     <header>
         <div>
            <a href="index.php"> <img src="images/logo.png" alt="Logo de tu blog" style="height: 40px; width: auto; float: left; border-radius: 50px;"></a>
@@ -26,7 +26,7 @@
         </section>
     </header>
 
-    <!-- Barra de Búsqueda -->
+
     <section>
         <form action="/buscar" method="get">
             <input type="text" id="busqueda" name="busqueda" placeholder="Buscar en el blog...">
@@ -34,7 +34,7 @@
         </form>
     </section>
 
-    <!-- Sección de Artículos -->
+ 
     <section id="seccion-articulos">
         <h3>ULTIMOS ARTICULOS:</h3>
 
@@ -78,7 +78,7 @@
         ?>
     </section>
 
-    <!-- Pie de Página (opcional) -->
+
     <footer>
         © 2023 Tu Blog de Estilo de Vida. Todos los derechos reservados.
     </footer>

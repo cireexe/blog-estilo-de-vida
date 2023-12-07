@@ -11,20 +11,18 @@
 <body>
 
 <header>
-    <!-- Tu encabezado aquí -->
+    
 </header>
 
 <section class="articles">
-    <!-- Artículos existentes aquí -->
-
-    <!-- Formulario para subir un nuevo artículo -->
+   
     <div class="article-form">
         <h1>SUBIR ARTICULO</h1>
         <form action="procesar_subida_articulo.php" method="post" enctype="multipart/form-data">
             <input type="text" name="articleTitle" placeholder="Título del artículo" required>
             <div id="editor-container"></div>
         
-            <!-- Agrega un campo oculto para guardar el contenido de Quill -->
+            
             <input type="hidden" id="articleContent" name="articleContent" required>
             <select name="articleSection" required>
                 <option value="mascotas">Mascotas</option>
@@ -38,9 +36,7 @@
     </div>
 </section>
 
-<div class="social-icons">
-    <!-- Tus iconos de redes sociales aquí -->
-</div>
+
 
 <footer>
     © 2023 Tu Blog de Estilo de Vida. Todos los derechos reservados.
@@ -50,10 +46,10 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var editor = new Quill('#editor-container', {
-            theme: 'snow' // Elige el tema (puedes probar otros temas según tus preferencias)
+            theme: 'snow' 
         });
 
-        // Captura cambios en el editor y actualiza el campo oculto
+        
         editor.on('text-change', function () {
             var content = editor.root.innerHTML;
             document.getElementById('articleContent').value = content;

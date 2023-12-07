@@ -28,7 +28,7 @@ section {
 
 form {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos del formulario */
+    align-items: center; 
 }
 
 label {
@@ -36,15 +36,15 @@ label {
 }
 
 input {
-    padding: 5px; /* Ajuste del padding */
+    padding: 5px; 
     flex: 1;
-    margin-right: 5px; /* Ajuste del margen derecho */
+    margin-right: 5px; 
 }
 
 button {
     background-color: #000000;
     color: rgb(255, 255, 255);
-    padding: 8px; /* Ajuste del padding */
+    padding: 8px; 
     border: none;
     cursor: pointer;
 }
@@ -76,7 +76,7 @@ footer {
 #seccion-articulos {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; Eliminado para que los cuadros estén uno al lado del otro */
+   
 }
 
 #seccion-articulos h3 {
@@ -86,17 +86,17 @@ footer {
 }
 
 article {
-    flex: 1 0 calc(25% - 20px); /* Ocupa el 25% del ancho total y deja un margen de 20px */
+    flex: 1 0 calc(25% - 20px); 
     margin: 10px;
-    border: 1px solid #ddd; /* Borde para resaltar el cuadro */
+    border: 1px solid #ddd; 
     padding: 10px;
     box-sizing: border-box;
-    max-width: 400px; /* Tamaño máximo de 100px */
+    max-width: 400px; 
     
  
 }
 #seccion-articulos article img {
-    max-width: 100%; /* Establecer el ancho máximo de la imagen al 100% del contenedor */
-    height: auto;    /* Mantener la proporción original de la imagen */
-    display: block;  /* Asegurar que la imagen no afecte a otros elementos en línea */
+    max-width: 100%; 
+    height: auto;    
+    display: block;  
 }

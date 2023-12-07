@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Detalle del Artículo - Tu Blog de Estilo de Vida</title>
-    <!-- Agrega aquí tus enlaces a hojas de estilo (CSS) si es necesario -->
+  
     <style>
        body {
             text-align: center;
@@ -96,7 +96,6 @@
     $conexion->close();
     ?>
 
-    <!-- Pie de Página (opcional) -->
     <footer>
         © 2023 Tu Blog de Estilo de Vida. Todos los derechos reservados.
     </footer>

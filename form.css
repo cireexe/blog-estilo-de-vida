@@ -47,8 +47,8 @@ section {
 }
 
 #editor-container {
-    max-height: 200px; /* Establece la altura máxima según tus preferencias */
-    overflow-y: auto; /* Activa el scroll vertical si es necesario */
+    max-height: 200px; 
+    overflow-y: auto;
     border: 1px solid #ced4da;
     border-radius: 4px;
     margin-bottom: 16px;
