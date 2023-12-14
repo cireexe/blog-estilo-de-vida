@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -28,7 +28,7 @@ section {
 
 form {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 label {
@@ -36,15 +36,15 @@ label {
 }
 
 input {
-    padding: 5px; 
+    padding: 5px;
     flex: 1;
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 button {
     background-color: #000000;
     color: rgb(255, 255, 255);
-    padding: 8px; 
+    padding: 8px;
     border: none;
     cursor: pointer;
 }
@@ -72,11 +72,10 @@ footer {
     text-align: center;
 }
 
-
 #seccion-articulos {
     display: flex;
     flex-wrap: wrap;
-   
+    
 }
 
 #seccion-articulos h3 {
@@ -86,20 +85,19 @@ footer {
 }
 
 article {
-    flex: 1 0 calc(25% - 20px); 
+    flex: 1 0 calc(25% - 20px); /* Cambiado a un tercio del ancho, manteniendo tres en una fila */
     margin: 10px;
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
     padding: 10px;
     box-sizing: border-box;
-    max-width: 400px; 
+    max-width: 300px; /* Ancho máximo ajustado */
     border-radius: 10px;
-    
- 
 }
+
 #seccion-articulos article img {
-    max-width: 100%; 
-    height: auto;    
-    display: block;  
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Agrega estos estilos para mejorar la apariencia de las sugerencias */
@@ -120,3 +118,9 @@ article {
     background-color: #e0e0e0;
 }
 
+@media only screen and (max-width: 768px) {
+    article {
+        flex: 1 0 calc(100% - 20px);
+        max-width: none; /* Ancho máximo eliminado en dispositivos más pequeños */
+    }
+}

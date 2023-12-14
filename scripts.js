@@ -94,9 +94,7 @@ $(document).ready(function () {
                         resultado.id +
                         '">' +
                         resultado.titulo +
-                        '</a></h3><img src="carpeta_imagenes/' +
-                        resultado.imagen +
-                        '" alt="Imagen del artículo"></article>'
+                        '</a></h3><img src="carpeta_imagenes/' 
                 );
             });
         } else {
