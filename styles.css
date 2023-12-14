@@ -92,6 +92,7 @@ article {
     padding: 10px;
     box-sizing: border-box;
     max-width: 400px; 
+    border-radius: 10px;
     
  
 }
@@ -100,3 +101,22 @@ article {
     height: auto;    
     display: block;  
 }
+
+/* Agrega estos estilos para mejorar la apariencia de las sugerencias */
+#sugerencias-container {
+    position: relative;
+}
+
+.sugerencia {
+    cursor: pointer;
+    padding: 8px;
+    margin: 2px 0;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.sugerencia:hover {
+    background-color: #e0e0e0;
+}
+

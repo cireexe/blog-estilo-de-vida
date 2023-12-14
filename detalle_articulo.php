@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Detalle del Artículo - Tu Blog de Estilo de Vida</title>
-  
+
     <style>
-       body {
+        body {
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
@@ -41,9 +41,9 @@
 
 <body>
 
-<header>
+    <header>
         <div>
-           <a href="index.php"> <img src="images/logo.png" alt="Logo de tu blog" style="height: 40px; width: auto; float: left; border-radius: 50px;"></a>
+            <a href="index.php"> <img src="images/logo.png" alt="Logo de tu blog" style="height: 40px; width: auto; float: left; border-radius: 50px;"></a>
         </div>
         <section>
             <a href="viaje.php">Viaje</a>
@@ -70,10 +70,14 @@
     // Obtener el ID del artículo de la URL si está definido
     $idArticulo = isset($_GET["id"]) ? $_GET["id"] : null;
 
+
     if ($idArticulo) {
-        // Realizar consulta para obtener el artículo completo
-        $sqlObtenerArticulo = "SELECT * FROM articulos WHERE id = $idArticulo";
-        $resultadoArticulo = $conexion->query($sqlObtenerArticulo);
+        // Utilizar consulta preparada
+        $sqlObtenerArticulo = "SELECT * FROM articulos WHERE id = ?";
+        $stmt = $conexion->prepare($sqlObtenerArticulo);
+        $stmt->bind_param("i", $idArticulo);
+        $stmt->execute();
+        $resultadoArticulo = $stmt->get_result();
 
         if ($resultadoArticulo->num_rows > 0) {
             $articulo = $resultadoArticulo->fetch_assoc();
@@ -82,26 +86,19 @@
             echo "<h1>" . $articulo["titulo"] . "</h1>";
 
             if (isset($articulo["imagen"])) {
-                echo "<img src='" . $articulo["imagen"] . "' alt='Imagen del artículo'>";
+                echo "<img src='" . htmlspecialchars($articulo["imagen"]) . "' alt='Imagen del artículo'>";
             }
 
+            // Mostrar el contenido sin usar htmlspecialchars
             echo "<p>" . $articulo["contenido"] . "</p>";
         } else {
             echo "Artículo no encontrado.";
         }
+
+        $stmt->close();
     } else {
         echo "Artículo no seleccionado.";
     }
 
     $conexion->close();
     ?>
-
-    <footer>
-        © 2023 Tu Blog de Estilo de Vida. Todos los derechos reservados.
-    </footer>
-
-    <script src="script.js"></script>
-
-</body>
-
-</html>
