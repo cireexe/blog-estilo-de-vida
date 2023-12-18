@@ -54,9 +54,9 @@
         <?php
         // Configuración de la conexión a la base de datos
         $host = "localhost";
-$usuario = "id21671733_celina";
-$contrasena = "Cbc.45422691";
-$base_de_datos = "id21671733_blog";
+        $usuario = "id21671733_celina";
+        $contrasena = "Cbc.45422691";
+        $base_de_datos = "id21671733_blog";
 
         $conexion = new mysqli($host, $usuario, $contrasena, $base_de_datos);
 
@@ -64,10 +64,8 @@ $base_de_datos = "id21671733_blog";
             die("Error de conexión a la base de datos: " . $conexion->connect_error);
         }
 
-        // Consulta para obtener los últimos artículos
-
-        $sqlObtenerArticulos = "SELECT id, titulo, contenido, imagen FROM articulos ORDER BY id DESC LIMIT 5";
-
+        // Consulta para obtener todos los artículos sin límite
+        $sqlObtenerArticulos = "SELECT id, titulo, contenido, imagen FROM articulos ORDER BY id DESC";
 
         $resultado = $conexion->query($sqlObtenerArticulos);
 
@@ -80,12 +78,12 @@ $base_de_datos = "id21671733_blog";
                     echo "<img src='" . $fila["imagen"] . "' alt='Imagen del artículo'>";
                 }
 
-
                 echo "</article></a>";
             }
         } else {
             echo "No hay artículos disponibles.";
         }
+
         $conexion->close();
         ?>
     </section>

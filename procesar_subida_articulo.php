@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error al subir la imagen.";
     }
-
+    
     $conexion->close();
 }
-?>
+    ?>
