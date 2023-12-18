@@ -36,8 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Obtener el ID del artículo recién insertado
             $idArticuloInsertado = $conexion->insert_id;
 
-            echo "Artículo subido con éxito.";
-
             // Redirigir al inicio con el ID del artículo
             header("Location: index.php?id=$idArticuloInsertado");
             exit();
